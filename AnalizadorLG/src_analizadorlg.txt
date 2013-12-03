@@ -1,0 +1,2 @@
+"C:\\Users\\fritz_000\\Documents\\CUCEI\\13B\\Teoria de la computacion\\Analizador Lexico-Grafico\\AnalizadorLG\\src\\AnalizadorLG.java"
+"C:\\Users\\fritz_000\\Documents\\CUCEI\\13B\\Teoria de la computacion\\Analizador Lexico-Grafico\\AnalizadorLG\\src\\AnalizarCasos.java"
