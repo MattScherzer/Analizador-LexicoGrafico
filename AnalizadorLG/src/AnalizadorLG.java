@@ -119,7 +119,8 @@ public class AnalizadorLG extends JFrame implements ActionListener
 	{
 		int i=0, estado=0, caso=0; //inicializar el validador de estados y el contador
 		int tamanio = cadena.length(); // recibir longitud de cadena
-
+		
+		strEstados = "0";
 		do
 		{
 			caso = estado;
@@ -129,7 +130,14 @@ public class AnalizadorLG extends JFrame implements ActionListener
 			{
 				case 1:
 					strEstados = strEstados + ",1";
-					strResultado = "IDENTIFICADOR";
+					if(expresion_artimetica == true)
+					{
+						strResultado = "EXPRESION ARITMÉTICA";
+					}
+					else
+					{
+						strResultado = "IDENTIFICADOR";
+					}
 				break;
 				case 2:
 					strEstados = strEstados + ",2";
@@ -164,12 +172,15 @@ public class AnalizadorLG extends JFrame implements ActionListener
 				break;
 				case 7:
 					strEstados = strEstados + ",7";
+					strResultado = "ERROR";
 				break;
 				case 8:
 					strEstados = strEstados + ",8";
+					strResultado = "ERROR";
 				break;
 				case 9:
 					strEstados = strEstados + ",9";
+					strResultado = "ERROR";
 				break;
 				case 10:
 					strEstados = strEstados + ",10";
@@ -178,14 +189,17 @@ public class AnalizadorLG extends JFrame implements ActionListener
 				case 11:
 					strEstados = strEstados + ",11";
 					signo = true;
+					strResultado = "ERROR";
 				break;
 				case 12:
 					strEstados = strEstados + ",12";
 					punto = true;
+					strResultado = "ERROR";
 				break;
 				case 13:
 					strEstados = strEstados + ",13";
 					expresion_artimetica = true;
+					strResultado = "ERROR";
 				break;
 				case 14:
 					strEstados = strEstados + ",14";
@@ -209,10 +223,12 @@ public class AnalizadorLG extends JFrame implements ActionListener
 				break;
 				case 17:
 					strEstados = strEstados + ",17";
+					strResultado = "ERROR";
 				break;
 				case 18:
 					strEstados = strEstados + ",18";
 					strResultado = "EXPONENCIAL";
+				break;
 				case 19: default:
 					strResultado = "ERROR";
 				break;

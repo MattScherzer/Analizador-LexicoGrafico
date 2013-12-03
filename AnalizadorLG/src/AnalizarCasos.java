@@ -218,7 +218,7 @@ public class AnalizarCasos
 				{
 					return 19;  // caso de error en caso de leer un caracter no valido
 				}
-			case 11: case 13:
+			case 11:
 				// El caso once puede mandar a 1 caso diferente + caso de error
 				if(Character.isDigit(caracter) == true)
 				{
@@ -233,6 +233,20 @@ public class AnalizarCasos
 				if(Character.isDigit(caracter) == true)
 				{
 					return 16;
+				}
+				else
+				{
+					return 19;  // caso de error en caso de leer un caracter no valido
+				}
+			case 13:
+				// El caso once puede mandar a 1 caso diferente + caso de error
+				if(Character.isDigit(caracter) == true)
+				{
+					return 6;
+				}
+				else if(Character.isLetter(caracter) == true)
+				{
+					return 1;
 				}
 				else
 				{
@@ -257,6 +271,10 @@ public class AnalizarCasos
 				else if(caracter == '+' || caracter == '-' || caracter == '*' || caracter == '/' || caracter == '^')
 				{
 					return 13;
+				}
+				else if(caracter == 'e')
+				{
+					return 14;
 				}
 				else
 				{

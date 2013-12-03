@@ -19,7 +19,7 @@
 			<applet_ref/>
 			<debugger_ref/>
 			<param/>
-			<run/>
+			<run>AnalizadorLG</run>
 			<verify>true</verify>
 		</runtime>
 	</runtimes>
@@ -31,6 +31,10 @@
 			</folderitem>
 			<fileitem>
 				<path>src\AnalizadorLG.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\AnalizarCasos.java</path>
 				<folder>src</folder>
 			</fileitem>
 		</include>
