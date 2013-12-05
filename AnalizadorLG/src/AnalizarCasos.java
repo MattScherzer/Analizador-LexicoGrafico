@@ -29,14 +29,14 @@ public class AnalizarCasos
 					{
 						return 15;
 					}
+					else if(Character.isLetter(caracter) == true || caracter == '_')
+					{
+					return 1;
+					}
 					else
 					{
 						return 19;
 					}
-				}
-				else if(Character.isLetter(caracter) == true || caracter == '_')
-				{
-					return 1;
 				}
 				else if(Character.isDigit(caracter) == true)
 				{
@@ -51,10 +51,14 @@ public class AnalizarCasos
 					return 19;
 				}
 			case 1:
-				// El caso uno es recursivo y puede mandar a caso de error
+				// El caso uno puede mandar a un caso distinto y puede mandar a caso de error
 				if(Character.isLetter(caracter) == true || Character.isDigit(caracter) == true || caracter == '_')
 				{
 					return 1; // se hace recursivo hasta el fin de cadena
+				}
+				else if(caracter == '+' || caracter == '-' || caracter == '*' || caracter == '/' || caracter == '^')
+				{
+					return 13;
 				}
 				else
 				{

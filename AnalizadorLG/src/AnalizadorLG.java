@@ -13,23 +13,26 @@ import java.util.*;
 import java.io.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.image.BufferedImage;
 
 
-import javax.swing.*; 
+import javax.swing.*;
+import javax.imageio.ImageIO;
  
 public class AnalizadorLG extends JFrame implements ActionListener
 {
 	
 	JTextField txtInsertar, txtResultado, txtEstado;
-	JButton btnAnalizar, btnBorrar, btnSalir;
-	JLabel lblAnalizar,lblEstado, lblResultado;
+	JButton btnAnalizar, btnBorrar, btnSalir, btnAutomata;
+	JLabel lblAnalizar,lblEstado, lblResultado, lblAutomata;
+	Icon icnAutomata;
 	
 	String strEstados = "0"; // cadena que imprime los estados por los que pasa la cadena al ser validada
 	String strResultado = ""; // cadena que imprime el resultado de la cadena despues de ser validada
 	
 	boolean signo = false, punto = false, expresion_artimetica = false, reservada = false;
 	
-	AnalizarCasos analisis = new AnalizarCasos(); // inicializar clase
+	AnalizarCasos analisis = new AnalizarCasos(); // inicializar clases
 	
 	public AnalizadorLG()
 	{
@@ -39,7 +42,7 @@ public class AnalizadorLG extends JFrame implements ActionListener
 	public void Visual()
 	{
 		super.setTitle("Analizador Léxico-Gráfico");
-		this.setBounds(500,170,350,350);
+		this.setBounds(450,150,350,380);
     	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 		
@@ -64,7 +67,10 @@ public class AnalizadorLG extends JFrame implements ActionListener
 		btnBorrar.setBounds(125,260,100,25);
 		btnSalir = new JButton("Salir");
 		btnSalir.setBounds(230,260,100,25);	
-
+		btnAutomata = new JButton("Mostrar Autómata");
+		btnAutomata.setBounds(20,300,310,25);
+		
+		
 		setLayout(null);
 		
 		// ADD LABEL
@@ -79,6 +85,7 @@ public class AnalizadorLG extends JFrame implements ActionListener
 		this.add(btnAnalizar);
 		this.add(btnBorrar);
 		this.add(btnSalir);
+		this.add(btnAutomata);
 
 		// VISIBLE
 		this.setVisible(true);
@@ -86,11 +93,17 @@ public class AnalizadorLG extends JFrame implements ActionListener
 		// EDITABLE
 		txtEstado.setEditable(false);
 		txtResultado.setEditable(false);
+		
+		// TOOLTIP
+		txtInsertar.setToolTipText("Ingresa la cadena a validar");
+		txtEstado.setToolTipText("Estados por los que es validado");
+		txtResultado.setToolTipText("Tipo de cadena ingresada");
 
 		// ACTION LISTENER
 		btnSalir.addActionListener(this);
 		btnBorrar.addActionListener(this);
 	    btnAnalizar.addActionListener(this);
+	    btnAutomata.addActionListener(this);
 	}
 	
 	public void actionPerformed(ActionEvent evt)
@@ -112,6 +125,11 @@ public class AnalizadorLG extends JFrame implements ActionListener
 		if(btnSalir == click)
 		{
 			System.exit(0);
+		}
+		if(btnAutomata == click)
+		{
+			MostrarAutomata ma = new MostrarAutomata();
+			ma.Visual();
 		}
 	} 
 	
