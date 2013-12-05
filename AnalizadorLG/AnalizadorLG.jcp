@@ -37,6 +37,10 @@
 				<path>src\AnalizarCasos.java</path>
 				<folder>src</folder>
 			</fileitem>
+			<fileitem>
+				<path>src\MostrarAutomata.java</path>
+				<folder>src</folder>
+			</fileitem>
 		</include>
 	</files>
 	<tasks/>

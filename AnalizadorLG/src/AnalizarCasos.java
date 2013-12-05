@@ -35,12 +35,12 @@ public class AnalizarCasos
 					}
 					else
 					{
-						return 19;
+						return 20;
 					}
 				}
 				else if(Character.isDigit(caracter) == true)
 				{
-					return 2; 
+					return 2;
 				}
 				else if(caracter == '+' || caracter == '-')
 				{
@@ -48,7 +48,7 @@ public class AnalizarCasos
 				}
 				else
 				{
-					return 19;
+					return 20;
 				}
 			case 1:
 				// El caso uno puede mandar a un caso distinto y puede mandar a caso de error
@@ -62,7 +62,7 @@ public class AnalizarCasos
 				}
 				else
 				{
-					return 19; // caso de error en caso de leer un caracter no valido
+					return 20; // caso de error en caso de leer un caracter no valido
 				}
 			case 2:
 				// El caso dos puede mandar a 5 casos diferentes + caso de error
@@ -88,7 +88,7 @@ public class AnalizarCasos
 				}
 				else
 				{
-					return 19; // caso de error en caso de leer un caracter no valido
+					return 20; // caso de error en caso de leer un caracter no valido
 				}
 			case 3:
 				// El caso tres puede mandar a 5 casos diferentes + caso de error
@@ -114,7 +114,7 @@ public class AnalizarCasos
 				}
 				else
 				{
-					return 19; // caso de error en caso de leer un caracter no valido
+					return 20; // caso de error en caso de leer un caracter no valido
 				}
 			case 4:
 				// El caso cuatro puede mandar a 5 casos diferentes + caso de error
@@ -140,7 +140,7 @@ public class AnalizarCasos
 				}
 				else
 				{
-					return 19; // caso de error en caso de leer un caracter no valido
+					return 20; // caso de error en caso de leer un caracter no valido
 				}
 			case 5:
 				// El caso cinco puede mandar a 5 casos diferentes + caso de error
@@ -166,7 +166,7 @@ public class AnalizarCasos
 				}
 				else
 				{
-					return 19; // caso de error en caso de leer un caracter no valido
+					return 20; // caso de error en caso de leer un caracter no valido
 				}
 			case 6:
 				// El caso seis es recursivo y puede mandar a 3 casos diferentes + caso de error
@@ -188,7 +188,7 @@ public class AnalizarCasos
 				}
 				else
 				{
-					return 19; // caso de error en caso de leer un caracter no valido
+					return 20; // caso de error en caso de leer un caracter no valido
 				}
 			case 7:
 				// El caso siete puede mandar a 1 caso diferente + caso de error
@@ -199,7 +199,7 @@ public class AnalizarCasos
 				}
 				else
 				{
-					return 19;  // caso de error en caso de leer un caracter no valido
+					return 20;  // caso de error en caso de leer un caracter no valido
 				}
 			case 8:
 				// El caso ocho puede mandar a 1 caso diferente + caso de error
@@ -210,7 +210,7 @@ public class AnalizarCasos
 				}
 				else
 				{
-					return 19;  // caso de error en caso de leer un caracter no valido
+					return 20;  // caso de error en caso de leer un caracter no valido
 				}				
 			case 9:
 				// El caso nueve puede mandar a 1 caso diferente + caso de error
@@ -220,7 +220,7 @@ public class AnalizarCasos
 				}
 				else
 				{
-					return 19;  // caso de error en caso de leer un caracter no valido
+					return 20;  // caso de error en caso de leer un caracter no valido
 				}
 			case 11:
 				// El caso once puede mandar a 1 caso diferente + caso de error
@@ -230,7 +230,7 @@ public class AnalizarCasos
 				}
 				else
 				{
-					return 19;  // caso de error en caso de leer un caracter no valido
+					return 20;  // caso de error en caso de leer un caracter no valido
 				}
 			case 12:
 				// El caso doce puede mandar a 1 caso diferente + caso de error
@@ -240,7 +240,7 @@ public class AnalizarCasos
 				}
 				else
 				{
-					return 19;  // caso de error en caso de leer un caracter no valido
+					return 20;  // caso de error en caso de leer un caracter no valido
 				}
 			case 13:
 				// El caso once puede mandar a 1 caso diferente + caso de error
@@ -254,7 +254,7 @@ public class AnalizarCasos
 				}
 				else
 				{
-					return 19;  // caso de error en caso de leer un caracter no valido
+					return 20;  // caso de error en caso de leer un caracter no valido
 				}
 			case 14:
 				// El caso catorce puede mandar a 1 caso diferente + caso de error
@@ -264,7 +264,7 @@ public class AnalizarCasos
 				}
 				else
 				{
-					return 19; // si no entra en ninguno de los casos anteriores manda a un estado de error
+					return 20; // si no entra en ninguno de los casos anteriores manda a un estado de error
 				}
 			case 16:
 				// El caso dieciseis es recursivo y puede mandar a 1 caso diferente + caso de error
@@ -282,20 +282,30 @@ public class AnalizarCasos
 				}
 				else
 				{
-					return 19; // si no entra en ninguno de los casos anteriores manda a un estado de error
+					return 20; // si no entra en ninguno de los casos anteriores manda a un estado de error
 				}
-			case 17: case 18:
-				// El caso diecisiete puede mandar a 1 caso diferente + caso de error
+			case 17: case 19:
+				// El caso diecisiete y diecinueve pueden mandar a 1 caso diferente + caso de error
 				if(Character.isDigit(caracter) == true)
 				{
 					return 18;
 				}
 				else
 				{
-					return 19; // si no entra en ninguno de los casos anteriores manda a un estado de error
+					return 20; // si no entra en ninguno de los casos anteriores manda a un estado de error
+				}
+			case 18:
+				// El caso dieciocho puede mandar a 1 caso diferente + caso de error
+				if(caracter == '.')
+				{
+					return 19;
+				}
+				else
+				{
+					return 20; // si no entra en ninguno de los casos anteriores manda a un estado de error
 				}
 			case 10: default:
-				return 19;
+				return 20;
 		}
 	}
 	

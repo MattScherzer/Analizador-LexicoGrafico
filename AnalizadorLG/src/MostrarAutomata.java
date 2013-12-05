@@ -28,14 +28,14 @@ public class MostrarAutomata extends JFrame
     public void Visual()
     {
     	super.setTitle("Automata");
-    	this.setBounds(280,150,1005,480);
+    	this.setBounds(50,50,1257,626);
 		this.setResizable(false);
 		
 		// ICON
 		icnAutomata = new ImageIcon(path);
 		// LABEL		
 		lblAutomata = new JLabel(icnAutomata);
-		lblAutomata.setBounds(0,0,1000,460);
+		lblAutomata.setBounds(0,0,1335,696);
 		
 		
 		setLayout(null);

@@ -247,7 +247,10 @@ public class AnalizadorLG extends JFrame implements ActionListener
 					strEstados = strEstados + ",18";
 					strResultado = "EXPONENCIAL";
 				break;
-				case 19: default:
+				case 19:
+					strEstados = strEstados + ",19";
+				break;
+				case 20: default:
 					strResultado = "ERROR";
 				break;
 			}
